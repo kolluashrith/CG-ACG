@@ -1,4 +1,4 @@
-digraph{
+strict digraph{
 
     ATT -> TTC
     TTC -> TCA
