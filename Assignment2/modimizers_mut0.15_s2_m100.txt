@@ -1,0 +1,4 @@
+The Jaccard coefficient is 0.01818.
+The Average Nucleotide Identity is exactly 0.8533.
+The Average Nucleotide Identity is approximately 0.8413.
+The number of modimizers found in sequence 1 is 9290 and the number found in sequence 2 is 9916.

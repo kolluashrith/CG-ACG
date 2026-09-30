@@ -1,0 +1,3 @@
+The Jaccard coefficient is 0.06167.
+The Average Nucleotide Identity is exactly 0.9026.
+The Average Nucleotide Identity is approximately 0.8975.
