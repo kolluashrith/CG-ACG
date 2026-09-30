@@ -1,0 +1,102 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_21zernss
+  - configs
+  - .bin_reads
+  - tmp/spades_f22o0j3l
+  - configs
+  job_uuid: SPAdes_Before_start_0GXZ21JJ3NGE5EE6W3CVFEU147P0Z3AH
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_AOBGZJD2VBCKEA2QWNHRHCQAS40WUFYK
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K31
+  args:
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/configs/config.info
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/configs/isolate_mode.info
+  config_dir: K31
+  del_after: []
+  job_uuid: SPAdes_K31_1K416FA7GJ35FPNMZNUVCKE7RHANYG6T
+  mpi_support: false
+  output_files: []
+  path: /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/miniforge3/envs/asn2/bin/spades-core
+  short_name: k31
+- STAGE: Copy files
+  args:
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/miniforge3/envs/asn2/share/spades/spades_pipeline/supplemetary/copy_files.py
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/before_rr.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/before_rr.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/assembly_graph_after_simplification.gfa
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/assembly_graph_after_simplification.gfa
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/final_contigs.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/contigs.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/first_pe_contigs.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/first_pe_contigs.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/strain_graph.gfa
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/strain_graph.gfa
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/scaffolds.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/scaffolds.fasta
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/scaffolds.paths
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/scaffolds.paths
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/assembly_graph_with_scaffolds.gfa
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/assembly_graph_with_scaffolds.gfa
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/assembly_graph.fastg
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/assembly_graph.fastg
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/K31/final_contigs.paths
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_ov4q6b7v
+  job_uuid: SPAdes_Copy_files_ZUC5RZEW4RDB1SHRQ4B8VQNAAG4MBVGE
+  mpi_support: false
+  output_files: []
+  path: /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/miniforge3/envs/asn2/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_KMA89OB2Q4IPXEUF0CXGBW7FN5UVP9FT
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/miniforge3/envs/asn2/share/spades/spades_pipeline/supplemetary/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/scaffolds.fasta
+  - --misc_dir
+  - /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/asm/asm/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Breaking_scaffolds_3U8O2V3P16RPA69JHW948E82Z0MESH3B
+  mpi_support: false
+  output_files: []
+  path: /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/miniforge3/envs/asn2/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  job_uuid: SPAdes_Terminate_FL1BNDBY8SJ79JMOJPQK2BXXQ7BLE6G1
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: terminate

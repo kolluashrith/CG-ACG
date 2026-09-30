@@ -1,0 +1,11 @@
+/Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/chr22_orig.fa /Users/ashrithkollu/Documents/Classes/Junior_Fall/CG-ACG/Assignment2/chr22_mut0.01_s3.fa
+NUCMER
+>chr22:20000000-21000000 chr22:20000000-21000000_mutated 1000001 1000001
+1 1000001 1 1000001 10005 10005 0
+-162600
+-1
+-1
+22
+1
+1
+0
